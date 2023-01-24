@@ -8,39 +8,37 @@
     <title>Five Day Weather Tracker</title>
 </head>
     <body>
-<!-----------------------------------------------Header ------------------------------------------------------>
+<!-- Header -->
         <div id="header" class="jumbotron jumbotron-fluid text-container">
             <h1 id="header-text" class="display-2">Five Day Weather Forecast</h1>
         </div>
-<!------------------------------ Search bar and recently searched city buttons ------------------------------->
-        <div id="content" class="container">
-            <div class="row">
-                <div id="content-left" class="col-md-3">
-                    <form>
-                        <label for="search-city">Search for a City:</label>
-                            <div class="form-row">
-                                <input id="search-city" class="form-control"></input>
-                                <button id="search-button" class="btn btn-primary" type="submit">Search</button>
-                            </div>
-                    </form>
-                            <div id="search-error"></div>
-                                <ul id="city-results" class="list-group mt-4"></ul>
-                                <a id="clear-storage" href="#"></a>    
-                            </div>
-<!------------------------------ Right Content (weather and five day forecast) ------------------------------>
-                            <div id="content-right" class="col-md-9 pt-4">
-<!-------------------------------------------- Current weather ---------------------------------------------->
-                                <div id="current-weather" class="border rounded"></div>
-<!------------------------------------------- Five day forecast --------------------------------------------->
-                                <div id="five-day-forecast" class="mt-5"></div>
-                            </div>
-            </div>
+<!-- Search bar and recently searched city buttons -->
+<div id="content" class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <form>
+                <label for="searchCity"></label>
+                <div class="form-label">
+                    <input id="searchCity" class="form-control" placeholder="Search Cities"></input>
+                    <button id="searchBtn" type="button" class="btn btn-primary form-control mt-2" onlick="clearLocalStorage()">Search</button>
+                </div>
+            </form>
+            <div id="searchError"></div>
+            <ul id="citySearches" class="list-group mt-4"></ul>
+            <button id="clearStorage" type="button" class="btn btn-light">Clear Search History</button>
         </div>
-<!-----------------------------------------------  JQuery  -------------------------------------------------->
+
+        <div id="content-right" class="col-md-9 pt-4">
+            <div id="currentWeather" class="border rounded"></div>
+            <div id="fiveDayForecast" class="mt-5"></div>
+        </div>
+    </div>
+</div>
+<!-- Jquery -->
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-<!----------------------------------------------- Bootstrap  ------------------------------------------------>
+<!-- Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!------------------------------------------- Custom Java Sheet --------------------------------------------->
+<!-- Custom Java Sheet -->
         <script src="Assets/script.js"></script>
     </body>
 
