@@ -1,4 +1,4 @@
-let apiKey = "3bfd7abbb87e64e6f756c29dcd4cdfbf";
+let owmAPI = "3bfd7abbb87e64e6f756c29dcd4cdfbf";
 var currentCity = "";
 var lastCity = "";
 
@@ -6,7 +6,7 @@ var getCurrentConditions = (event) => {
     // Obtain city name from the search box
     let city = $('#searchCity').val();
     currentCity= $('#searchCity').val();
-    let dataSearch = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&APPID=" + apiKey;
+    let dataSearch = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial" + "&APPID=" + owmAPI;
     fetch(dataSearch)
     .then((response) => {
         return response.json();
